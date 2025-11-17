@@ -174,7 +174,7 @@ body {
 
 .cta-button {
     display: inline-block;
-    background: var(--secondary-color);
+    background: linear-gradient(90deg, var(--vibgyor-blue) 0%, var(--vibgyor-green) 50%, var(--vibgyor-yellow) 100%);
     color: var(--cta-text);
     padding: 12px 40px;
     border-radius: var(--border-radius);
@@ -182,12 +182,13 @@ body {
     font-weight: 600;
     transition: var(--transition);
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
 }
 
 .cta-button:hover {
-    background: var(--vibgyor-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.5);
+    background: linear-gradient(90deg, var(--vibgyor-green) 0%, var(--vibgyor-yellow) 50%, var(--vibgyor-orange) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 230, 118, 0.6);
 }
 
 /* About Section */
