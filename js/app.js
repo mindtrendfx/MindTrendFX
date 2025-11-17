@@ -53,23 +53,65 @@ function showMessage(message, type) {
     formMessage.className = `form-message ${type}`;
 }
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+// Inspiration Panel Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const inspirationToggle = document.getElementById('inspirationToggle');
+    const closeInspiration = document.getElementById('closeInspiration');
+    const inspirationPanel = document.getElementById('inspirationPanel');
+
+    if (inspirationToggle && inspirationPanel) {
+        inspirationToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            inspirationPanel.classList.remove('hidden');
+            inspirationPanel.classList.add('open');
+            inspirationToggle.classList.add('open');
+            console.log('Panel opened');
+        });
+    }
+
+    if (closeInspiration && inspirationPanel) {
+        closeInspiration.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            inspirationPanel.classList.remove('open');
+            inspirationPanel.classList.add('hidden');
+            if (inspirationToggle) inspirationToggle.classList.remove('open');
+            console.log('Panel closed');
+        });
+    }
+
+    // Close inspiration panel when clicking outside
+    document.addEventListener('click', function(event) {
+        if (inspirationPanel && 
+            !inspirationPanel.contains(event.target) && 
+            inspirationToggle &&
+            !inspirationToggle.contains(event.target) &&
+            inspirationPanel.classList.contains('open')) {
+            inspirationPanel.classList.remove('open');
+            inspirationPanel.classList.add('hidden');
+            if (inspirationToggle) inspirationToggle.classList.remove('open');
         }
     });
-});
 
-// Update social media links
-document.addEventListener('DOMContentLoaded', function() {
-    // Update these with your actual social media URLs
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // Don't prevent default or smooth scroll for buttons
+            if (this.tagName === 'BUTTON') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Update social media links
     const socialLinks = {
         youtube: 'https://www.youtube.com/YOUR_CHANNEL',
         telegram: 'https://t.me/YOUR_CHANNEL',

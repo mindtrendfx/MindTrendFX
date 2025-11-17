@@ -210,6 +210,149 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Inspiration Slider Button */
+.inspiration-slider {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--vibgyor-violet) 0%, var(--secondary-color) 100%);
+    border: none;
+    width: 50px;
+    height: 100px;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.inspiration-slider:hover {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--vibgyor-violet) 100%);
+    box-shadow: -6px 6px 20px rgba(255, 0, 110, 0.5);
+}
+
+.inspiration-slider i {
+    transition: transform 0.3s ease;
+}
+
+.inspiration-slider.open i {
+    transform: rotate(180deg);
+}
+
+/* Inspiration Panel */
+.inspiration-panel {
+    position: fixed;
+    right: -450px;
+    top: 0;
+    width: 450px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.98) 0%, rgba(31, 31, 50, 0.98) 100%);
+    backdrop-filter: blur(10px);
+    border-left: 2px solid var(--secondary-color);
+    z-index: 998;
+    padding: 2rem;
+    overflow-y: auto;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.inspiration-panel.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.inspiration-panel.open {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.close-inspiration {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 0, 110, 0.2);
+    border: 1px solid var(--secondary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.close-inspiration:hover {
+    background: rgba(255, 0, 110, 0.4);
+    transform: rotate(90deg);
+}
+
+.inspiration-content {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.inspiration-panel .quote-text {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.inspiration-panel .quote-author {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Inspiration Panel */
+@media (max-width: 768px) {
+    .inspiration-panel {
+        width: 100%;
+        right: -100%;
+    }
+
+    .inspiration-panel.open {
+        right: 0;
+    }
+
+    .inspiration-slider {
+        width: 45px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inspiration-panel {
+        width: 100%;
+        right: -100%;
+        padding: 1.5rem;
+    }
+
+    .inspiration-slider {
+        width: 40px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .inspiration-panel .quote-text {
+        font-size: 1.5rem;
+    }
+
+    .inspiration-panel .quote-author {
+        font-size: 0.9rem;
+    }
+}
+
 /* About Section */
 .about {
     padding: 80px 20px;
@@ -278,31 +421,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
 }
 
-/* Quote Section */
-.quote-section {
-    background: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(63, 81, 181, 0.1) 100%);
-    padding: 80px 20px;
-    text-align: center;
-}
 
-.quote-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.quote-text {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1rem;
-    font-style: italic;
-    animation: fadeIn 1s ease;
-}
-
-.quote-author {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-}
 
 /* Registration Section */
 .register {
