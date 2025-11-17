@@ -892,13 +892,100 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.75rem 0;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
     .nav-links {
-        gap: 1rem;
-        font-size: 0.9rem;
+        gap: 0.6rem;
+    }
+
+    .nav-icon-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 15px 60px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 40px 25px;
+    }
+
+    .brand-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
     }
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 12px 35px;
+        font-size: 1rem;
+    }
+
+    /* Modals */
+    .modal-content {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+        margin: 20px;
+    }
+
+    .modal-close {
+        top: 1rem;
+        right: 1rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-body h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-body .feature {
+        padding: 1.25rem;
+    }
+
+    /* Quote */
+    .quote-text {
+        font-size: 1.6rem;
+        padding: 0 0.5rem;
+    }
+
+    .quote-author {
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Registration Page */
+    .register-page {
+        padding: 100px 15px 60px;
     }
 
     .register-page h1 {
@@ -907,6 +994,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .section-subtitle {
         font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     .registration-form-container {
@@ -916,58 +1004,107 @@ h1, h2, h3, h4, h5, h6 {
 
     .registration-form,
     .registration-benefits {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
 
-    .quote-text {
-        font-size: 1.8rem;
+    .registration-benefits h3 {
+        font-size: 1.5rem;
     }
 
-    .about h2,
-    .register h2 {
-        font-size: 2rem;
+    .benefits-list li {
+        font-size: 0.95rem;
     }
 
-    .social-links {
-        gap: 0.75rem;
-    }
-
-    .social-link {
-        padding: 0.5rem 0.4rem;
-        font-size: 0.8rem;
-    }
-
-    .social-link i {
-        font-size: 1.2rem;
-    }
-
-    .footer-content {
-        gap: 1rem;
-    }
-
-    .footer-text p {
-        font-size: 0.8rem;
-    }
-
-    .footer .social-link {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.8rem;
-    }
-
-    .footer .social-link i {
+    .form-group label {
         font-size: 0.9rem;
     }
 
-    .footer-social h4 {
+    .form-group input,
+    .form-group select {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+
+    .submit-button {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0 1.5rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link {
+        padding: 0.75rem;
         font-size: 0.85rem;
-        margin-bottom: 0.5rem;
+    }
+
+    .social-link i {
+        font-size: 1.5rem;
+    }
+
+    .footer-text p {
+        font-size: 0.85rem;
+    }
+
+    .footer-social h4 {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
+    /* Navigation - Stack icons vertically on very small screens */
+    .navbar {
+        padding: 0.6rem 0;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+
     .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.4rem;
+    }
+
+    .nav-icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 90px 10px 50px;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
     }
 
     .hero h1 {
@@ -976,14 +1113,175 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero p {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+
+    /* Modals */
+    .modal-content {
+        padding: 1.5rem 1rem;
+        max-width: 95%;
+        margin: 10px;
+    }
+
+    .modal-close {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .modal-body h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .modal-body > p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-body .feature {
+        padding: 1rem;
+    }
+
+    .modal-body .feature i {
+        font-size: 1.3rem;
+    }
+
+    .modal-body .feature h3 {
+        font-size: 1rem;
+    }
+
+    .modal-body .feature p {
+        font-size: 0.85rem;
+    }
+
+    /* Quote */
+    .inspiration-quote {
+        padding: 1.5rem;
+    }
+
+    .quote-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
     }
 
     .quote-text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+    .quote-author {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    /* Registration Page */
+    .register-page {
+        padding: 90px 10px 50px;
+    }
+
+    .register-page h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .registration-form,
+    .registration-benefits {
+        padding: 1.5rem 1rem;
+    }
+
+    .registration-benefits h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefits-list li {
+        font-size: 0.85rem;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefits-list li i {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 11px 12px;
+        font-size: 0.9rem;
+    }
+
+    .form-hint {
+        font-size: 0.75rem;
+        margin-top: 0.4rem;
+    }
+
+    .submit-button {
+        padding: 13px;
+        font-size: 0.95rem;
+        gap: 0.4rem;
+    }
+
+    .form-message {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1.5rem 0 1rem;
     }
 
     .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-social h4 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .social-links {
         gap: 0.75rem;
+        flex-direction: column;
+    }
+
+    .social-link {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .social-link i {
+        font-size: 1.3rem;
+    }
+
+    .social-link span {
+        font-size: 0.85rem;
+    }
+
+    .footer-text {
+        margin-top: 1rem;
     }
 
     .footer-text p {
@@ -993,21 +1291,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer-text .disclaimer {
         font-size: 0.7rem;
-    }
-
-    .footer .social-link {
-        padding: 0.35rem 0.5rem;
-        font-size: 0.75rem;
-        gap: 0.25rem;
-    }
-
-    .footer .social-link i {
-        font-size: 0.85rem;
-    }
-
-    .footer-social h4 {
-        font-size: 0.8rem;
-        margin-bottom: 0.4rem;
-    }
+        margin-top: 0.5rem;
     }
 }
