@@ -83,8 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo h1 {
     color: var(--white);
-    font-size: 1.6rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.8rem;
     font-weight: 700;
+    letter-spacing: 0.05em;
     background: linear-gradient(90deg, var(--vibgyor-violet) 0%, var(--vibgyor-indigo) 14%, var(--vibgyor-blue) 28%, var(--vibgyor-green) 42%, var(--vibgyor-yellow) 57%, var(--vibgyor-orange) 71%, var(--vibgyor-red) 85%, var(--secondary-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
