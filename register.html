@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MindTrendFX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="MindTrendFXLogo.JPG" alt="MindTrendFX Logo">
+                <h1>MindTrendFX</h1>
+            </div>
+            <ul class="nav-links">
+                <li><button class="nav-icon-btn" id="navHomeBtn" title="Home" onclick="window.location.href='index.html'">
+                    <i class="fas fa-home"></i>
+                </button></li>
+                <li><button class="nav-icon-btn" id="navAboutBtn" title="About Us">
+                    <i class="fas fa-info-circle"></i>
+                </button></li>
+                <li><button class="nav-icon-btn active" id="navRegisterBtn" title="Register">
+                    <i class="fas fa-user-plus"></i>
+                </button></li>
+                <li><button class="nav-icon-btn" id="navInspirationToggle" title="Inspiration">
+                    <i class="fas fa-lightbulb"></i>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="stock-line" style="animation-delay: 0s;"></div>
+        <div class="stock-line" style="animation-delay: 2s;"></div>
+        <div class="stock-line" style="animation-delay: 4s;"></div>
+        <div class="stock-line" style="animation-delay: 6s;"></div>
+        <div class="stock-line" style="animation-delay: 8s;"></div>
+    </div>
+
+    <!-- Registration Section -->
+    <section class="hero register-page">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join MindTrendFX</h1>
+                <p class="section-subtitle">Start your journey to becoming a successful trader</p>
+                
+                <div class="registration-form-container">
+                    <form id="registrationForm" class="registration-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">
+                                    <i class="fas fa-user"></i> Full Name *
+                                </label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email Address *
+                                </label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="countryCode">
+                                    <i class="fas fa-flag"></i> Country Code *
+                                </label>
+                                <select id="countryCode" name="countryCode" required>
+                                    <option value="">Select Country</option>
+                                    <option value="+1" data-length="10">🇺🇸 United States (+1)</option>
+                                    <option value="+44" data-length="10">🇬🇧 United Kingdom (+44)</option>
+                                    <option value="+91" data-length="10">🇮🇳 India (+91)</option>
+                                    <option value="+86" data-length="11">🇨🇳 China (+86)</option>
+                                    <option value="+61" data-length="9">🇦🇺 Australia (+61)</option>
+                                    <option value="+81" data-length="10">🇯🇵 Japan (+81)</option>
+                                    <option value="+49" data-length="10">🇩🇪 Germany (+49)</option>
+                                    <option value="+33" data-length="9">🇫🇷 France (+33)</option>
+                                    <option value="+971" data-length="9">🇦🇪 UAE (+971)</option>
+                                    <option value="+65" data-length="8">🇸🇬 Singapore (+65)</option>
+                                    <option value="+60" data-length="9-10">🇲🇾 Malaysia (+60)</option>
+                                    <option value="+66" data-length="9">🇹🇭 Thailand (+66)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Phone Number (Numbers only) *
+                                </label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Enter phone number" pattern="[0-9]{8,11}" title="Please enter only numbers (8-11 digits)">
+                                <small id="phoneHint" class="form-hint"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="experience">
+                                    <i class="fas fa-chart-bar"></i> Trading Experience *
+                                </label>
+                                <select id="experience" name="experience" required>
+                                    <option value="">Select your experience level</option>
+                                    <option value="beginner">Beginner - New to trading</option>
+                                    <option value="intermediate">Intermediate - Some experience</option>
+                                    <option value="advanced">Advanced - Experienced trader</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="interests">
+                                    <i class="fas fa-star"></i> Areas of Interest
+                                </label>
+                                <select id="interests" name="interests">
+                                    <option value="">What would you like to learn?</option>
+                                    <option value="stocks">Stock Trading</option>
+                                    <option value="options">Options Trading</option>
+                                    <option value="forex">Forex Trading</option>
+                                    <option value="crypto">Cryptocurrency</option>
+                                    <option value="technical">Technical Analysis</option>
+                                    <option value="fundamental">Fundamental Analysis</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-rocket"></i> Register Now
+                        </button>
+                        <p id="formMessage" class="form-message"></p>
+                    </form>
+
+                    <div class="registration-benefits">
+                        <h3>What You'll Get:</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check-circle"></i> Access to comprehensive trading courses</li>
+                            <li><i class="fas fa-check-circle"></i> Expert mentorship and guidance</li>
+                            <li><i class="fas fa-check-circle"></i> Live trading sessions and webinars</li>
+                            <li><i class="fas fa-check-circle"></i> Community support and networking</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time market analysis</li>
+                            <li><i class="fas fa-check-circle"></i> Lifetime access to learning resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="content-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeAboutModal" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h2>About MindTrendFX</h2>
+                <p>MindTrendFX is an educational platform dedicated to teaching stock market trading to beginners and intermediate traders. Our mission is to empower learners with knowledge, strategies, and confidence to make informed trading decisions.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Real-world Strategies</h3>
+                        <p>Learn proven trading strategies used by successful traders</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Expert Guidance</h3>
+                        <p>Learn from experienced market professionals</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Support</h3>
+                        <p>Join a community of learners and traders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inspiration Modal -->
+    <div id="inspirationModal" class="content-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeInspirationModal" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="inspiration-quote">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="quote-text">"The stock market is filled with individuals who know the price of everything, but the value of nothing."</p>
+                <p class="quote-author">- Philip Fisher</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@ridhcharttalks" target="_blank" class="social-link youtube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://t.me/+zWbjw2ioVsAwYTYx" target="_blank" class="social-link telegram" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://www.instagram.com/ridhcharttalks" target="_blank" class="social-link instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 MindTrendFX. All rights reserved.</p>
+                    <p class="disclaimer">Disclaimer: Trading involves risk. Past performance does not guarantee future results.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

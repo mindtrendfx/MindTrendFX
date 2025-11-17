@@ -20,9 +20,18 @@
                 <h1>MindTrendFX</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#register">Register</a></li>
+                <li><button class="nav-icon-btn" id="navHomeBtn" title="Home">
+                    <i class="fas fa-home"></i>
+                </button></li>
+                <li><button class="nav-icon-btn" id="navAboutBtn" title="About Us">
+                    <i class="fas fa-info-circle"></i>
+                </button></li>
+                <li><a href="register.html" class="nav-icon-btn" title="Register">
+                    <i class="fas fa-user-plus"></i>
+                </a></li>
+                <li><button class="nav-icon-btn" id="navInspirationToggle" title="Inspiration">
+                    <i class="fas fa-lightbulb"></i>
+                </button></li>
             </ul>
         </div>
     </nav>
@@ -30,32 +39,39 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to MindTrendFX</h1>
+            <div class="hero-brand">
+                <h1 class="brand-title">MindTrendFX</h1>
+            </div>
+            <h2>Welcome to Trading Excellence</h2>
             <p>Master the art of stock market trading through expert-led courses and practical guidance</p>
-            <a href="#register" class="cta-button">Start Your Journey</a>
+            <div class="hero-buttons">
+                <a href="register.html" class="cta-button">Start Your Journey</a>
+            </div>
         </div>
         <div class="hero-background"></div>
-        <button class="inspiration-slider" id="inspirationToggle" title="View Inspiration">
-            <i class="fas fa-chevron-left"></i>
-        </button>
     </section>
 
-    <!-- Inspiration Panel -->
-    <div id="inspirationPanel" class="inspiration-panel hidden">
-        <button class="close-inspiration" id="closeInspiration" title="Close">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="inspiration-content">
-            <h2 class="quote-text">"Anybody can trade, learners last long"</h2>
-            <p class="quote-author">— MindTrendFX</p>
+    <!-- Inspiration Modal -->
+    <div id="inspirationModal" class="content-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeInspirationModal" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="inspiration-quote">
+                <h2 class="quote-text">"Anybody can trade, learners last long"</h2>
+                <p class="quote-author">— MindTrendFX</p>
+            </div>
         </div>
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About MindTrendFX</h2>
-            <div class="about-content">
+    <!-- About Modal -->
+    <div id="aboutModal" class="content-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="closeAboutModal" title="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <h2>About MindTrendFX</h2>
                 <p>MindTrendFX is an educational platform dedicated to teaching stock market trading to beginners and intermediate traders. Our mission is to empower learners with knowledge, strategies, and confidence to make informed trading decisions.</p>
                 <div class="features">
                     <div class="feature">
@@ -76,47 +92,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Registration Section -->
-    <section id="register" class="register">
-        <div class="container">
-            <h2>Join Our Course Today</h2>
-            <p class="section-subtitle">Start your stock market trading journey with us</p>
-            
-            <form id="registrationForm" class="registration-form">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number (Optional)</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                </div>
-                
-                <div class="form-group">
-                    <label for="experience">Trading Experience</label>
-                    <select id="experience" name="experience" required>
-                        <option value="">Select your experience level</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="submit-button">Register Now</button>
-                <p id="formMessage" class="form-message"></p>
-            </form>
-        </div>
-    </section>
-
-    <!-- Social Media Section -->
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -124,15 +101,15 @@
                 <div class="footer-social">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.youtube.com" target="_blank" class="social-link youtube" title="YouTube">
+                        <a href="https://www.youtube.com/@ridhcharttalks" target="_blank" class="social-link youtube" title="YouTube">
                             <i class="fab fa-youtube"></i>
                             <span>YouTube</span>
                         </a>
-                        <a href="https://t.me" target="_blank" class="social-link telegram" title="Telegram">
+                        <a href="https://t.me/+zWbjw2ioVsAwYTYx" target="_blank" class="social-link telegram" title="Telegram">
                             <i class="fab fa-telegram"></i>
                             <span>Telegram</span>
                         </a>
-                        <a href="https://www.instagram.com" target="_blank" class="social-link instagram" title="Instagram">
+                        <a href="https://www.instagram.com/ridhcharttalks" target="_blank" class="social-link instagram" title="Instagram">
                             <i class="fab fa-instagram"></i>
                             <span>Instagram</span>
                         </a>
