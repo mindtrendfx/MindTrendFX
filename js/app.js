@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update social media links
     const socialLinks = {
         youtube: 'https://www.youtube.com/@ridhcharttalks',
-        telegram: 'https://t.me/+zWbjw2ioVsAwYTYx',
+        telegram: 'https://t.me/+R4DCumglwzQwNTEx',
         instagram: 'https://www.instagram.com/ridhcharttalks'
     };
     

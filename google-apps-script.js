@@ -307,7 +307,7 @@ function sendConfirmationEmail(data) {
               <a href="https://www.youtube.com/@ridhcharttalks" style="color: #00bcd4; text-decoration: none; margin: 0 10px;">
                 📺 YouTube
               </a> | 
-              <a href="https://t.me/+zWbjw2ioVsAwYTYx" style="color: #00bcd4; text-decoration: none; margin: 0 10px;">
+              <a href="https://t.me/+R4DCumglwzQwNTEx" style="color: #00bcd4; text-decoration: none; margin: 0 10px;">
                 💬 Telegram
               </a> | 
               <a href="https://www.instagram.com/ridhcharttalks" style="color: #00bcd4; text-decoration: none; margin: 0 10px;">
@@ -352,7 +352,7 @@ function sendConfirmationEmail(data) {
     
     FOLLOW US:
     YouTube: https://www.youtube.com/@ridhcharttalks
-    Telegram: https://t.me/+zWbjw2ioVsAwYTYx
+    Telegram: https://t.me/+R4DCumglwzQwNTEx
     Instagram: https://www.instagram.com/ridhcharttalks
     
     ---

@@ -100,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     list-style: none;
     gap: 1rem;
+    z-index: 999;
 }
 
 .nav-links a {
@@ -129,7 +130,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.3rem;
     transition: all 0.3s ease;
     box-shadow: 0 3px 12px rgba(255, 107, 107, 0.4);
-    z-index: 1001;
+    z-index: 1002;
+    position: relative;
 }
 
 .mobile-menu-toggle:hover {
@@ -955,10 +957,13 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
         position: relative;
         -webkit-tap-highlight-color: transparent;
         touch-action: manipulation;
+        min-width: 45px;
+        min-height: 45px;
+        z-index: 1002 !important;
     }
 
     /* Mobile menu - slide in from right */
