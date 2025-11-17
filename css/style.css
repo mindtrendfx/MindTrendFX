@@ -73,12 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    z-index: 1001;
 }
 
 .logo img {
@@ -117,6 +112,33 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a:hover {
     color: var(--vibgyor-blue);
     text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #a29bfe 100%);
+    border: none;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(255, 107, 107, 0.4);
+    z-index: 1001;
+}
+
+.mobile-menu-toggle:hover {
+    background: linear-gradient(135deg, #a29bfe 0%, #4ecdc4 50%, #ff6b6b 100%);
+    transform: scale(1.05);
+}
+
+.mobile-menu-toggle.active {
+    background: linear-gradient(135deg, #f44336 0%, #e91e63 100%);
 }
 
 /* Navigation Icon Buttons */
@@ -909,14 +931,54 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.3rem;
     }
 
+    /* Show mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Mobile menu - slide in from right */
     .nav-links {
-        gap: 0.6rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 280px;
+        background: linear-gradient(135deg, rgba(26, 26, 46, 0.98) 0%, rgba(31, 31, 50, 0.98) 100%);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 80px 20px 20px;
+        gap: 1.5rem;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-icon-btn {
-        width: 38px;
-        height: 38px;
+        width: 100%;
+        height: 55px;
+        border-radius: 12px;
+        justify-content: flex-start;
+        padding: 0 20px;
+        gap: 15px;
+        font-size: 1.1rem;
+    }
+
+    .nav-icon-btn::after {
+        content: attr(title);
         font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .nav-icon-btn i {
+        font-size: 1.3rem;
     }
 
     /* Hero Section */
@@ -1076,17 +1138,34 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+    }
+
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 
     .nav-links {
-        gap: 0.4rem;
+        width: 250px;
+        padding: 70px 15px 15px;
+        gap: 1.25rem;
     }
 
     .nav-icon-btn {
-        width: 35px;
-        height: 35px;
+        height: 50px;
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .nav-icon-btn::after {
         font-size: 0.9rem;
+    }
+
+    .nav-icon-btn i {
+        font-size: 1.2rem;
     }
 
     /* Hero Section */

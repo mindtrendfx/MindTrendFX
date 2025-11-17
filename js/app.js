@@ -181,6 +181,48 @@ function showMessage(message, type) {
 
 // Modal Handlers
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            
+            // Change icon
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(event.target) && 
+                !mobileMenuToggle.contains(event.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.className = 'fas fa-bars';
+            }
+        });
+
+        // Close menu when clicking a nav item
+        navLinks.querySelectorAll('.nav-icon-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.className = 'fas fa-bars';
+            });
+        });
+    }
+
     // Home Button - scroll to top/hero section
     const navHomeBtn = document.getElementById('navHomeBtn');
     if (navHomeBtn) {
