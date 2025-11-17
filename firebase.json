@@ -1,10 +1,14 @@
 {
   "hosting": {
-    "public": "public",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "**/*.md",
+      "google-apps-script.js",
+      "package.json",
+      "package-lock.json"
     ],
     "rewrites": [
       {
