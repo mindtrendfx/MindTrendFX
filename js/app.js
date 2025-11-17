@@ -186,7 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.getElementById('navLinks');
     
     if (mobileMenuToggle && navLinks) {
-        mobileMenuToggle.addEventListener('click', function(e) {
+        // Handle both click and touch events for better mobile support
+        const toggleMenu = function(e) {
+            e.preventDefault();
             e.stopPropagation();
             navLinks.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
@@ -198,7 +200,13 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 icon.className = 'fas fa-bars';
             }
-        });
+        };
+        
+        mobileMenuToggle.addEventListener('click', toggleMenu);
+        mobileMenuToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            toggleMenu(e);
+        }, { passive: false });
 
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
