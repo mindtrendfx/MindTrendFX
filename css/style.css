@@ -913,6 +913,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive */
+@media (min-width: 769px) {
+    /* Ensure mobile menu is hidden on desktop */
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    .nav-links {
+        position: static !important;
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto !important;
+        width: auto !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .nav-icon-btn::after {
+        content: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     /* Navigation */
     .navbar {
