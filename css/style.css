@@ -130,6 +130,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     box-shadow: 0 3px 12px rgba(255, 107, 107, 0.4);
     z-index: 1001;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .mobile-menu-toggle:hover {
@@ -956,6 +959,9 @@ h1, h2, h3, h4, h5, h6 {
     /* Show mobile menu toggle */
     .mobile-menu-toggle {
         display: flex;
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     /* Mobile menu - slide in from right */
